@@ -77,11 +77,11 @@ class _TodoListState extends State<TodoList> {
               builder: (context) {
                 return const AddTodo();
               },
-            )).then((value) {
-              setState(() {
-                
-              });
-            },);
+            )).then(
+              (value) {
+                setState(() {});
+              },
+            );
           },
           label: Text('Enter a new task')),
       body: Column(

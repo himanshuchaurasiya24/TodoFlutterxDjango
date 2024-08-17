@@ -9,3 +9,9 @@ class TodoGet(generics.ListCreateAPIView):
 class TodoUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
     queryset= Todo.objects.all()
     serializer_class = TodoSerializer
+def update_todo(id):
+    queryset = Todo.objects.get(id = id)
+    queryset.title='updated'
+    queryset.save()
+    print(queryset)
+
